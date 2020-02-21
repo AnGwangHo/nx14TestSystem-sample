@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="edit_inputtype_jp" left="0" top="0" width="1024" height="768" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Static id="Static00" taborder="0" text=" Edit, Textarea 일본어 입력필터 설정" left="8" top="9" width="671" height="35" style="background:aqua;border:1 solid #808080ff ;font:12 MS Gothic;"/>
+        <Static id="Static01" taborder="1" text=" inputtype 설정" left="8" top="95" width="156" height="35" style="background:wheat;border:1 solid #808080ff ;"/>
+        <CheckBox id="chk_half" taborder="2" left="291" top="95" width="61" height="35" text="half"/>
+        <CheckBox id="chk_english" taborder="4" left="355" top="95" width="77" height="35" text="english"/>
+        <CheckBox id="chk_alpha" taborder="5" left="443" top="95" width="63" height="35" text="alpha"/>
+        <CheckBox id="chk_digit" taborder="6" left="515" top="95" width="69" height="35" text="digit"/>
+        <CheckBox id="chk_number" taborder="7" left="587" top="95" width="77" height="35" text="number"/>
+        <Button id="Btn_inputtype" taborder="8" text="set" left="173" top="94" width="86" height="36" onclick="Btn_inputtype_onclick"/>
+        <Static id="Static02" taborder="9" text=" maxlength 설정" left="8" top="141" width="156" height="35" style="background:wheat;border:1 solid #808080ff ;"/>
+        <Button id="Btn_maxlength" taborder="10" text="set" left="173" top="140" width="86" height="36" onclick="Btn_maxlength_onclick"/>
+        <Spin id="Spin00" taborder="11" value="0" left="272" top="140" width="149" height="74" max="30" style="buttonsize:40;"/>
+        <Static id="Static03" taborder="12" text=" 현재 inputtype 설정값 : normal" left="7" top="248" width="436" height="29" style="border:1 solid #808080ff ;color:red;"/>
+        <Static id="Static04" taborder="13" text=" 현재 maxlength 설정값 : 0" left="446" top="248" width="233" height="29" style="border:1 solid #808080ff ;"/>
+        <Edit id="Edit00" taborder="14" left="8" top="341" width="332" height="60"/>
+        <TextArea id="TextArea00" taborder="15" left="346" top="341" width="333" height="123"/>
+        <Grid id="Grid00" taborder="16" useinputpanel="false" left="7" top="281" width="672" height="52" binddataset="Dataset00" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Col size="80"/>
+                <Col size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row band="body" size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell col="0" disptype="normal" text="Edit_ios"/>
+                <Cell col="1" disptype="normal" text="Textarea_ios"/>
+              </Band>
+              <Band id="body">
+                <Cell col="0" disptype="normal" text="bind:Edit_ios"/>
+                <Cell col="1" disptype="normal" text="bind:Textarea_ios"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static05" taborder="17" text=" inputfilter 설정" left="8" top="52" width="156" height="35" style="background:wheat;border:1 solid #808080ff ;"/>
+        <Button id="Btn_inputfilter" taborder="18" text="set" left="173" top="52" width="86" height="36" onclick="Btn_inputfilter_onclick"/>
+        <Static id="Static06" taborder="19" text=" 현재 inputfilter 설정값 : none" left="7" top="224" width="436" height="29" style="border:1 solid #808080ff ;"/>
+        <CheckBox id="chk_alpha_filter" taborder="20" text="alpha" left="291" top="52" width="61" height="35"/>
+        <CheckBox id="chk_digit_filter" taborder="21" text="digit" left="355" top="52" width="77" height="35"/>
+        <Button id="Button00" taborder="22" text="set Value(&quot;test001&quot;)" left="434" top="143" width="158" height="34" onclick="Button00_onclick"/>
+        <TextArea id="TextArea01" taborder="24" left="346" top="485" width="333" height="123" displaynulltext="displaynulltext" visible="false"/>
+        <Button id="Button01" taborder="25" text="set Value(null)" left="434" top="183" width="158" height="34" onclick="Button01_onclick"/>
+        <Static id="Static07" taborder="26" text=" ※displaynulltext 설정" left="10" top="464" width="330" height="25" visible="false"/>
+        <Button id="Button02" taborder="27" text="set Value(&quot;12345678&quot;)" left="594" top="143" width="158" height="34" onclick="Button02_onclick"/>
+        <Button id="Button03" taborder="28" text="set Value(&quot;ABCDEFG&quot;)" left="594" top="183" width="158" height="34" onclick="Button03_onclick"/>
+        <Edit id="Edit01" taborder="23" left="8" top="485" width="332" height="60" displaynulltext="displaynulltext" visible="false"/>
+        <Edit id="Edit02" taborder="29" left="690" top="347" height="47" width="167" visible="false"/>
+        <Button id="Button04" taborder="30" text="value값 확인" left="7" top="412" height="44" width="142" onclick="Button04_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="Edit_ios" type="STRING" size="256"/>
+          <Column id="Textarea_ios" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row/>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="Edit00" propid="value" datasetid="Dataset00" columnid="Edit_ios"/>
+      <BindItem id="item1" compid="TextArea00" propid="value" datasetid="Dataset00" columnid="Textarea_ios"/>
+      <BindItem id="item2" compid="Edit01" propid="value" datasetid="Dataset00" columnid="Edit_ios"/>
+      <BindItem id="item3" compid="TextArea01" propid="value" datasetid="Dataset00" columnid="Textarea_ios"/>
+    </Bind>
+    <Script type="xscript5.0"><![CDATA[
+
+this.Btn_inputfilter_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	var s_inputfilter = "";
+	if (!this.chk_alpha_filter.value && !this.chk_digit_filter.value)
+	{
+		s_inputfilter = "none";
+		this.Edit00.set_inputfilter(s_inputfilter);
+		this.TextArea00.set_inputfilter(s_inputfilter);
+		this.Edit01.set_inputfilter(s_inputfilter);
+		this.TextArea01.set_inputfilter(s_inputfilter);
+	}
+	else
+	{
+		if (this.chk_alpha_filter.value)
+		{
+			if (s_inputfilter.length == 0)
+			{
+				s_inputfilter = "alpha";
+			}
+			else
+			{
+				s_inputfilter += ",alpha";
+			}
+		}
+		if (this.chk_digit_filter.value)
+		{
+			if (s_inputfilter.length == 0)
+			{
+				s_inputfilter = "digit";
+			}
+			else
+			{
+				s_inputfilter += ",digit";
+			}
+		}
+		this.Edit00.set_inputfilter(s_inputfilter);
+		this.TextArea00.set_inputfilter(s_inputfilter);
+		this.Edit01.set_inputfilter(s_inputfilter);
+		this.TextArea01.set_inputfilter(s_inputfilter);
+	}
+	this.Static06.set_text(" 현재 inputfilter 설정값 : " + s_inputfilter);
+}
+
+this.Btn_inputtype_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	var s_inputtype = "";
+	if (!this.chk_half.value && !this.chk_alpha.value && !this.chk_english.value && !this.chk_digit.value && !this.chk_number.value)
+	{
+		s_inputtype = "normal";
+		this.Edit00.set_inputtype(s_inputtype);
+		this.TextArea00.set_inputtype(s_inputtype);
+	}
+	else
+	{
+		if (this.chk_half.value)
+		{
+			if (s_inputtype.length == 0)
+			{
+				s_inputtype = "half";
+			}
+			else
+			{
+				s_inputtype += ",half";
+			}
+		}
+		if (this.chk_alpha.value)
+		{
+			if (s_inputtype.length == 0)
+			{
+				s_inputtype = "alpha";
+			}
+			else
+			{
+				s_inputtype += ",alpha";
+			}
+		}
+		if (this.chk_english.value)
+		{
+			if (s_inputtype.length == 0)
+			{
+				s_inputtype = "english";
+			}
+			else
+			{
+				s_inputtype += ",english";
+			}
+		}
+		if (this.chk_digit.value)
+		{
+			if (s_inputtype.length == 0)
+			{
+				s_inputtype = "digit";
+			}
+			else
+			{
+				s_inputtype += ",digit";
+			}
+		}
+		if (this.chk_number.value)
+		{
+			if (s_inputtype.length == 0)
+			{
+				s_inputtype = "number";
+			}
+			else
+			{
+				s_inputtype += ",number";
+			}
+		}
+		this.Edit00.set_inputtype(s_inputtype);
+		this.TextArea00.set_inputtype(s_inputtype);
+		this.Edit01.set_inputtype(s_inputtype);
+		this.TextArea01.set_inputtype(s_inputtype);
+	}
+	this.Static03.set_text(" 현재 inputtype 설정값 : " + s_inputtype);
+}
+
+this.Btn_maxlength_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	var vMaxlength = this.Spin00.value;
+	this.Edit00.set_maxlength(vMaxlength);
+	this.TextArea00.set_maxlength(vMaxlength);
+	this.Edit01.set_maxlength(vMaxlength);
+	this.TextArea01.set_maxlength(vMaxlength);
+	this.Static04.set_text(" 현재 maxlength 설정값 : " + vMaxlength);
+}
+
+
+this.Button00_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	this.Edit00.set_value("test001");
+	this.TextArea00.set_value("test001");
+	this.Edit01.set_value("test001");
+	this.TextArea01.set_value("test001");
+}
+
+this.Button01_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	this.Edit00.set_value(null);
+	this.TextArea00.set_value(null);
+	this.Edit01.set_value(null);
+	this.TextArea01.set_value(null);
+}
+
+this.Button02_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	this.Edit00.set_value("12345678");
+	this.TextArea00.set_value("12345678");
+	this.Edit01.set_value("12345678");
+	this.TextArea01.set_value("12345678");
+}
+
+this.Button03_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	this.Edit00.set_value("ABCDEFG");
+	this.TextArea00.set_value("ABCDEFG");
+	this.Edit01.set_value("ABCDEFG");
+	this.TextArea01.set_value("ABCDEFG");
+}
+
+this.Button04_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	this.alert(this.Edit00.value);
+}
+]]></Script>
+  </Form>
+</FDL>
