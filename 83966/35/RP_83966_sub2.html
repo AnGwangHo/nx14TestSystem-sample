@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+body
+	{
+		font-size:40px;
+		height:80px;
+	}
+input
+	{ 
+		font-size: 40px; 
+		width:200px;
+		height:80px;
+	 } 
+
+textarea
+{	
+	font-size: 40px;
+	
+}	 
+</style>
+<script type="text/javascript">
+function url_change(url)
+{
+	location.href=url;
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="sub1" style="width:200px; height:100px; font-size:30px" onclick="url_change('./main_test.html')"><br>
+ 
+<label for="radio0" style="">성별 : </label>
+<input id="man01" name="radio01" type="radio" value="M" style="width:50px"><label for="man01">남</label>
+<input id="female01" name="radio01" type="radio" value="f" style="width:50px"><label for="female01">여</label><br>
+
+<label for="radio1" style="">성별 : </label>
+<input id="man02" name="radio11" type="radio" value="M" style="width:50px" checked="checked"><label for="man02">남</label>
+<input id="female02" name="radio11" type="radio" value="f" style="width:50px"><label for="female02">여</label> <br>
+
+<label for="radio2" style="">성별 : </label>
+<input id="man03" name="radio22" type="radio" value="M" style="width:50px" checked="checked" disabled><label for="man03">남</label>
+<input id="female03" name="radio22" type="radio" value="f" style="width:50px" disabled><label for="female03">여</label> <br><br>
+
+<label for="check0">선택</label>
+<input type="checkbox" id="check01"  name="chk1" style="width:50px" value="필수"><label for="check01">필수</label>&nbsp;
+<input type="checkbox" id="check02"  name="chk2" style="width:50px" value="필수" checked="checked"><label for="check02">필수</label>&nbsp;
+<input type="checkbox" id="check03"  name="chk3" style="width:50px" value="필수" checked="checked" disabled><label for="check03">필수</label><br><br>
+
+
+<label for="lbl_area" >지역</label>
+  <select id="lbl_area" style="height:50px; width:180px; font-size:40px">
+  <option value="volvo">강남구</option>
+  <option value="saab">관악구</option>
+  <option value="mercedes">송파구</option>
+  <option value="audi">광진구</option>
+</select><br><br>
+
+<label for="img0">이미지</label>
+<input type="image" id="img0" style="width:400px; height:400px; vertical-align:top"  alt="넥사크로  제품소개 " src="http://www.tobesoft.co.kr/images/product/nexcro_tit.png">
+ 
+  
+</body>
+</html>
