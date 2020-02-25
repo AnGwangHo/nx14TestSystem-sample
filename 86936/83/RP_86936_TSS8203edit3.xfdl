@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="TSS8203edit2" left="0" top="0" width="1024" height="768" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Static id="Static00" taborder="2" text="inputtype=&quot;digit&quot;" left="60" top="80" height="50" width="120" style="border:1 solid #385d8aff ;"/>
+        <Edit id="Edit00" taborder="0" left="200" top="80" height="50" width="120" inputtype="digit" canchange="_print" cancharchange="_print" onchanged="_print" onchar="_print" ontextchange="_print" ontextchanged="_print" onlbuttondown="_print" onlbuttonup="_print" onkillfocus="_print" onsetfocus="_print"/>
+        <Button id="Button00" taborder="1" text="Button00" left="340" top="80" height="50" width="120" onclick="Button00_onclick" onlbuttondown="_print" onlbuttonup="_print" onkillfocus="_print" onsetfocus="_print"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.0"><![CDATA[this._print = function (obj, e)
+{
+	trace(obj.id+'_'+e.eventid);
+}
+
+
+this.Button00_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	this._print(obj, e);
+	alert("value:"+this.Edit00.value);
+}
+]]></Script>
+  </Form>
+</FDL>
